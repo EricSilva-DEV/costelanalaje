@@ -160,11 +160,17 @@ checkoutBtn.addEventListener("click", function(){
     }
 
     // Enviar pedido no whatsApp //
-    const cartItems = cart.map((item) => {
-        return (
-          ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} `
-        );
-    }).join("")
+    // const cartItems = cart
+    //   .map((item) => {
+    //     return ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} `;
+    //   })
+    //   .join("");
+
+    const cartItems = cart
+      .map((item) => {
+        return `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price}`;
+      })
+      .join("\n");
 
     const message = encodeURIComponent(cartItems)
     const phone = "5521979080487"
@@ -181,7 +187,7 @@ checkoutBtn.addEventListener("click", function(){
 function checkRestauranteOpen() {
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 11 && hora < 22;
+    return hora >= 10 && hora < 22;
 }
 
 const spanItem = document.getElementById("date-span")
