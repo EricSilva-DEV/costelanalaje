@@ -20,16 +20,16 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
-        <!-- <video src="/assets/background.header.mp4" muted loop autoplay></video> -->
-        <div class="w-full h-full flex flex-col justify-center items-center">
+    <header class="w-full h-[420px] relative">
+        <video class="absolute inset-0 w-full h-full object-cover" src="/assets/background.header2.mp4" muted loop autoplay playsinline></video>
+        <div class="relative w-full h-full flex flex-col justify-center items-center">
             <img 
             src="./assets/costela.logo.png" 
             alt="Logo do restaurante"
             class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200 bg-white"
             />
             <h1 class="text-3xl mt-4 mb-2 font-bold text-white">Costela na Laje</h1>
-            <span class="text-white font-light">Descubra o Sabor Inigualável da Nossa Costela na Brasa! 🔥🥩</span>
+            <span class="text-white font-medium">Descubra o Sabor Inigualável da Nossa <br>Costela na Brasa! 🔥🥩</span>
             <div class="bg-green-600 px-4 py-1.5 rounded-md mt-5"  id="date-span">
                 <span class="text-white font-medium">Sábado e Domingo - 11:00 as 15:00</span>
             </div>
