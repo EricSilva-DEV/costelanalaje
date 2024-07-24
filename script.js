@@ -162,8 +162,8 @@ checkoutBtn.addEventListener("click", function(){
     // Enviar pedido no whatsApp //
     const cartItems = cart.map((item) => {
         return (
-            ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`     
-        )
+          ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} `
+        );
     }).join("")
 
     const message = encodeURIComponent(cartItems)
@@ -181,7 +181,7 @@ checkoutBtn.addEventListener("click", function(){
 function checkRestauranteOpen() {
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 11 && hora < 15;
+    return hora >= 11 && hora < 22;
 }
 
 const spanItem = document.getElementById("date-span")
